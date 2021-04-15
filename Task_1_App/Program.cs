@@ -1,4 +1,5 @@
 ﻿using Task_1_Library;
+using Task_2;
 
 namespace Task_1_App
 {
@@ -6,12 +7,11 @@ namespace Task_1_App
     {
         static void Main(string[] args)
         {
-            var amzon = new Stock("Amzon", 2000);
-            Stock aple = new();
+            var silver = new Metal {Name = "Silver", Weight = 2000, Price = 200};
 
             var logger = new Logger("log.json");
 
-            logger.Track(aple);
+            logger.Track(silver);
         }
     }
 }

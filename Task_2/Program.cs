@@ -7,7 +7,7 @@ namespace Task_2
     {
         static void Main(string[] args)
         {
-            var sb = SimpleBinder.GetInstance() ?? throw new ArgumentNullException("Binder.GetInstance()");
+            var sb = SimpleBinder.GetInstance();
 
             var gold = (Metal) sb.Bind(typeof(Metal), new Dictionary<string, string>
             {
