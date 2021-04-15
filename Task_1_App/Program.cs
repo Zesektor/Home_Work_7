@@ -7,7 +7,7 @@ namespace Task_1_App
     {
         static void Main(string[] args)
         {
-            var silver = new Metal {Name = "Silver", Weight = 2000, Price = 200};
+            var silver = new Metal {Name = "Silver", Weight = 2000, Price = 200.5};
 
             var logger = new Logger("log.json");
 

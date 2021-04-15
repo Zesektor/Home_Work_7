@@ -30,9 +30,14 @@ namespace Task_1_Library
             }
 
             var propertyValues = new Dictionary<string, object>();
-            
-            var properties = type.GetProperties(BindingFlags.Instance);
-            var fields = type.GetFields(BindingFlags.Instance);
+
+            const BindingFlags flags = BindingFlags.NonPublic |
+                                       BindingFlags.Public |
+                                       BindingFlags.Instance |
+                                       BindingFlags.Static;
+
+            var properties = type.GetProperties(flags);
+            var fields = type.GetFields(flags);
 
             foreach (var property in properties)
             {
